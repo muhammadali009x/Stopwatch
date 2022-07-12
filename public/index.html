@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stopwatch</title>
+</head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+<style>
+    body{
+        background-color: cadetblue;
+    }
+    .dvMain{
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+    }
+    .timer, .semicolon{
+        font-size: 180px;
+        display: inline-block;
+        width: 150px;
+        font-family: consolas;
+        color: rgb(165, 11, 11);
+    }
+    .dvLabels{
+        flex-direction: row;
+        width: auto
+        
+    }
+    .btn{
+        justify-content: space-around;
+    }
+    @media only screen and (max-width: 1200px) {
+        .timer, .semicolon{
+            font-size: 150px;
+            display: inline-block;
+            width: 120px;
+        }
+    }
+    @media only screen and (max-width: 991px) {
+            .timer, .semicolon{
+            font-size: 100px;
+            display: inline-block;
+            width: 85px;
+        }
+    }
+    @media only screen and (max-width: 767px) {
+            .timer, .semicolon{
+            font-size: 65px;
+            display: inline-block;
+            width: 50px;
+        }
+    }
+    @media only screen and (max-width: 440px) {
+            .timer, .semicolon{
+            font-size: 40px;
+            display: inline-block;
+            width: 30px;
+        }
+        .btn{
+            width: 70px;
+            font-size: medium;
+        }
+    }
+    @media only screen and (max-width: 298px) {
+            .timer, .semicolon{
+            font-size: 30px;
+            display: inline-block;
+            width: 25px;
+        }
+        .btn{
+            width: 60px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+    }
+    @media only screen and (max-width: 263px) {
+        #h1{
+            font-size: 30px;
+        }
+            .timer, .semicolon{
+            font-size: 20px;
+            display: inline-block;
+            width: 15px;
+        }
+        .btn{
+            width: 50px;
+            font-size: 8px;
+            font-weight: bold;
+        }
+    }
+    @media only screen and (max-width: 193px) {
+        #h1{
+            font-size: 20px;
+        }
+            .timer, .semicolon{
+            font-size: 15px;
+            display: inline-block;
+            width: 10px;
+        }
+        .btn{
+            width: 50px;
+            font-size: 8px;
+            font-weight: bold;
+        }
+    }
+</style>
+<body>
+    
+    <div class="container dvMain">
+        <br><br>
+        <h1 id ="h1">STOPWATCH</h1>
+        <br><br>
+        <div class="dvLabels container-md">
+            <label for="hrs" id="hrs" class=" h1 timer">00</label> <label for="hrs" class="semicolon">:</label>
+            <label for="min" id="min" class=" h1 timer">00</label> <label for="min" class="semicolon">:</label>
+            <label for="sec" id="sec" class=" h1 timer">00</label> <label for="min" class="semicolon">:</label>
+            <label for="msec" id="msec" class=" h1 timer">00</label> 
+        </div>
+        <br>
+        <br><br>
+        <div class="dvButtons">
+            <button type="button" id="start" class="btn btn-primary btn-lg" onclick="start()">Start</button>
+            <button type="button" id="stop" class="btn btn-danger btn-lg" onclick="pause()">Stop</button>
+            <button type="button" id="reset" class="btn btn-success btn-lg" onclick="reset()">Reset</button>
+        </div>
+    </div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+<script src="app.js"></script>
+
+</body>
+</html>
